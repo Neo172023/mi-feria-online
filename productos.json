@@ -1,5 +1,20 @@
 [
   {
+    "id": "art-mvib96g4",
+    "nombre": "prueba",
+    "categoria": "Otros",
+    "descripcion": "lo mejor",
+    "precio": 100,
+    "precioAnterior": null,
+    "imagen": "assets/selfie-mvib931v-1.jpg",
+    "imagenes": [
+      "assets/selfie-mvib931v-1.jpg"
+    ],
+    "emoji": "📦",
+    "estado": "Disponible",
+    "fecha": "2026-10-21"
+  },
+  {
     "id": "art-mvi3ogej",
     "nombre": "Bicicleta",
     "categoria": "Otros",
