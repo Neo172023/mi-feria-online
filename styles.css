@@ -5,3 +5,13 @@
 .photo .gallery-nav{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:7px;z-index:2}
 .gallery-nav button{border:0;border-radius:20px;padding:6px 10px;background:#fffdf0e8;color:#172032;cursor:pointer;font-size:12px;font-weight:800}
 .gallery-nav button[aria-current="true"]{background:#173e38;color:white}
+
+/* Visor de fotografías a pantalla ampliada */
+.photo img{cursor:zoom-in}
+.photo-lightbox{position:fixed;inset:0;width:min(96vw,1150px);height:min(94vh,850px);max-width:none;max-height:none;margin:auto;padding:50px 54px 42px;border:0;border-radius:16px;background:#101827;color:white;box-shadow:0 20px 90px #0008;overflow:hidden}
+.photo-lightbox::backdrop{background:rgba(4,12,22,.87)}
+.photo-lightbox img{width:100%;height:100%;object-fit:contain}
+.photo-lightbox button{position:absolute;border:0;border-radius:50%;background:#ffffffd9;color:#10202c;cursor:pointer;width:38px;height:38px;font-size:20px;display:grid;place-items:center}
+.photo-lightbox button[hidden]{display:none}
+.lightbox-close{top:9px;right:9px}.lightbox-prev{left:8px;top:50%}.lightbox-next{right:8px;top:50%}.lightbox-count{position:absolute;bottom:10px;left:0;right:0;text-align:center;font-size:14px}
+@media(max-width:560px){.photo-lightbox{width:100vw;height:100dvh;border-radius:0;padding:48px 35px 42px}}
