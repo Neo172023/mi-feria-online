@@ -16,3 +16,13 @@ $('#photoFile').addEventListener('change',e=>{
  msg('Fotos seleccionadas. Descargalas, subilas a assets/ y publicá productos.json.');
 });
 $('#photoDownload').onclick=()=>{selectedPhotos.forEach((p,i)=>{const u=URL.createObjectURL(p.file);setTimeout(()=>{const a=document.createElement('a');a.href=u;a.download=p.filename;a.click();setTimeout(()=>URL.revokeObjectURL(u),2000)},i*400)});msg('Se inició la descarga. El navegador podría pedir permiso para descargar varios archivos.')};
+
+/* Revisión previa: sin publicar ni enviar credenciales */
+$('#publishPreview').onclick=()=>{
+ const area=$('#publishReview');area.replaceChildren();
+ const title=document.createElement('strong');title.textContent='Revisión del catálogo local';area.append(title);
+ const summary=document.createElement('p');summary.textContent=items.length+' productos · '+items.filter(p=>p.estado==='Disponible').length+' disponibles · '+items.filter(p=>p.estado==='Reservado').length+' reservados · '+items.filter(p=>p.estado==='Vendido').length+' vendidos';area.append(summary);
+ const ul=document.createElement('ul');
+ for(const p of items){const li=document.createElement('li');const photos=(p.imagenes?.length?p.imagenes:[p.imagen]).filter(Boolean);li.textContent=p.nombre+' — $ '+p.precio.toLocaleString('es-AR')+' — '+p.estado+' — '+photos.length+' foto(s)';ul.append(li)}
+ area.append(ul);const note=document.createElement('p');note.className='hint';note.textContent='Esta vista muestra el borrador guardado en este navegador. No modifica la tienda pública.';area.append(note);area.hidden=!area.hidden;
+};
