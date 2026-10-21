@@ -1,0 +1,5 @@
+[
+  {"id":"taladro-ejemplo","nombre":"Taladro eléctrico (ejemplo)","categoria":"Herramientas","descripcion":"Publicación de demostración. Reemplazá este texto por el estado, marca y características reales.","precio":45000,"precioAnterior":55000,"imagen":"","emoji":"🛠️","estado":"Disponible","fecha":"2026-10-21"},
+  {"id":"notebook-ejemplo","nombre":"Notebook (ejemplo)","categoria":"Tecnología","descripcion":"Producto de ejemplo. Agregá modelo, memoria, almacenamiento y detalles.","precio":350000,"precioAnterior":null,"imagen":"","emoji":"💻","estado":"Disponible","fecha":"2026-10-20"},
+  {"id":"silla-ejemplo","nombre":"Silla de escritorio (ejemplo)","categoria":"Hogar","descripcion":"Producto de ejemplo para mostrar cómo se ven los artículos vendidos.","precio":28000,"precioAnterior":null,"imagen":"","emoji":"🪑","estado":"Vendido","fecha":"2026-10-19"}
+]
