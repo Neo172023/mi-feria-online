@@ -48,3 +48,9 @@
 .owner-photo-dialog::backdrop{background:#000b}
 .owner-photo-dialog img{display:block;max-width:100%;max-height:76dvh;object-fit:contain;border-radius:12px}
 .owner-photo-close{position:absolute;top:5px;right:6px;border:0;border-radius:50%;background:#fff;color:#101827;font-size:25px;width:35px;height:35px;cursor:pointer}
+
+/* Foto ampliada: usar espacio disponible sin recortar */
+.owner-photo-dialog{width:min(92vw,460px);max-width:92vw;max-height:88dvh;padding:18px;border-radius:16px;overflow:visible}
+.owner-photo-dialog img{display:block;width:100%;height:auto;max-height:78dvh;object-fit:contain;object-position:center;border-radius:12px}
+.owner-photo-close{top:-14px;right:-12px;z-index:2}
+@media(max-width:560px){.owner-photo-dialog{width:88vw;padding:12px}.owner-photo-dialog img{width:100%;max-height:75dvh}}
