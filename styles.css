@@ -40,3 +40,11 @@
 .nav .brand-copy strong{font-size:12px;line-height:1.2}
 .nav .contact{font-size:11px;padding:9px 10px}
 }
+
+/* Ampliación accesible de foto de perfil */
+.owner-avatar{cursor:zoom-in}
+.owner-avatar:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.owner-photo-dialog{border:0;padding:18px;background:#101827;border-radius:18px;box-shadow:0 25px 90px #0009;max-width:min(92vw,520px);max-height:90dvh;position:fixed;color:white}
+.owner-photo-dialog::backdrop{background:#000b}
+.owner-photo-dialog img{display:block;max-width:100%;max-height:76dvh;object-fit:contain;border-radius:12px}
+.owner-photo-close{position:absolute;top:5px;right:6px;border:0;border-radius:50%;background:#fff;color:#101827;font-size:25px;width:35px;height:35px;cursor:pointer}
