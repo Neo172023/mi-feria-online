@@ -30,3 +30,13 @@
 .nav .brand-copy strong{font-size:16px;line-height:1.18;color:#58dbb2;font-weight:850}
 .nav .contact{flex:0 0 auto}
 @media(max-width:560px){.nav{gap:8px}.nav .logo{max-width:calc(100% - 116px);gap:8px}.nav .logo .owner-avatar{width:42px;height:42px;flex-basis:42px}.nav .brand-copy small{font-size:11px}.nav .brand-copy strong{font-size:13px}.nav .contact{font-size:12px;padding:9px 11px}}
+
+/* Perfil más visible en pantallas pequeñas */
+@media(max-width:560px){
+.nav{height:86px;gap:8px}
+.nav .logo{max-width:calc(100% - 112px);gap:9px}
+.nav .logo .owner-avatar{width:64px;height:64px;flex:0 0 64px;object-fit:cover;object-position:center 32%;border:3px solid #69e4b8}
+.nav .brand-copy small{font-size:11px}
+.nav .brand-copy strong{font-size:12px;line-height:1.2}
+.nav .contact{font-size:11px;padding:9px 10px}
+}
