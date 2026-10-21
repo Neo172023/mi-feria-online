@@ -95,3 +95,46 @@ body.storefront{background:#f8fafc;color:#172238;font-family:Inter,system-ui,-ap
 @media(max-width:900px){.storefront .hero-layout{grid-template-columns:1fr .65fr}.storefront .hero-art{transform:scale(.82)}.storefront .grid{grid-template-columns:repeat(2,minmax(0,1fr))}.storefront .nav-links{gap:14px}}
 @media(max-width:650px){.storefront .wrap{padding-left:18px;padding-right:18px}.storefront .announcement{font-size:10px}.storefront .nav{height:68px;gap:10px}.storefront .nav-links{display:none}.storefront .brand-mark{width:38px;height:38px;font-size:22px}.storefront .logo{font-size:13px}.storefront .contact{padding:11px 12px;font-size:12px}.storefront .hero{padding:50px 0 48px}.storefront .hero-layout{display:block}.storefront .hero h1{font-size:clamp(36px,10vw,48px);letter-spacing:-1.7px}.storefront .hero p{font-size:15px}.storefront .hero-art{display:none}.storefront .hero-trust{gap:11px;font-size:11px}.storefront .benefits-grid{grid-template-columns:1fr;gap:16px;padding-top:20px;padding-bottom:20px}.storefront .benefits-grid>div{justify-content:flex-start}.storefront .catalog{padding-top:48px;padding-bottom:55px}.storefront .heading{align-items:flex-start;flex-direction:column;gap:12px}.storefront .filters{grid-template-columns:1fr 1fr;margin-top:20px}.storefront .filters input{grid-column:span 2}.storefront .grid{grid-template-columns:1fr}.storefront .steps{grid-template-columns:1fr;gap:12px}.storefront .how-section{padding:55px 0}.storefront .cta-inner{display:block}.storefront .cta .primary{margin-top:24px;white-space:normal}.storefront .cta h2{font-size:26px}}
 @media(prefers-reduced-motion:reduce){.storefront .item{transition:none}}
+
+
+/* Tienda compacta 3.1: priorizar catálogo en móvil */
+body.compact-store{background:#f7f9fc;color:#19253b}
+.compact-store header{background:#fff!important;color:#172238!important;border-bottom:1px solid #e7ebf1}
+.compact-store .nav{height:66px;gap:12px}
+.compact-store .logo{display:flex;align-items:center;gap:10px;font-size:15px;line-height:1.15;letter-spacing:0;min-width:0}
+.compact-store .brand-name{display:block;white-space:normal}
+.compact-store .brand-name strong{display:block;color:#1859c5}
+.compact-store .brand-mark{width:38px;height:38px;flex:none;border-radius:11px;background:#1859c5;color:#fff;font-size:22px}
+.compact-store .contact{background:#e7f6ec;color:#14683a;border-radius:11px;padding:11px 14px;font-size:13px;flex:none}
+.compact-store .hero{background:linear-gradient(105deg,#eaf2ff,#f7faff)!important;color:#19253b!important;padding:36px 0 37px!important}
+.compact-store .hero h1{font-size:clamp(29px,4vw,44px);line-height:1.12;letter-spacing:-1.3px;margin:9px 0 9px;max-width:650px}
+.compact-store .hero p{font-size:15px;color:#617188;margin:0 0 18px;line-height:1.5}
+.compact-store .hero .eyebrow{color:#1859c5;font-size:10px}
+.compact-store .primary{background:#1859c5;color:#fff;padding:12px 17px;border-radius:10px;font-size:14px;box-shadow:none}
+.compact-store .catalog{padding-top:30px;padding-bottom:55px;scroll-margin-top:75px}
+.compact-store .heading{align-items:center;flex-direction:row}
+.compact-store .heading h2{font-size:26px;letter-spacing:-.7px;margin:0}
+.compact-store #counter{margin:0;font-size:11px}
+.compact-store .filters{margin:16px 0 20px;grid-template-columns:2fr 1fr 1fr}
+.compact-store .filters input,.compact-store .filters select{padding:12px 13px;font-size:13px}
+.compact-store .grid{gap:15px}
+.compact-store .item{border-radius:14px}
+.compact-store .item-body{padding:16px}
+.compact-store .price{font-size:24px}
+.compact-store .footer{border-top:1px solid #e5eaf1}
+@media(max-width:650px){
+.compact-store .wrap{padding-left:16px;padding-right:16px}
+.compact-store .nav{height:62px}
+.compact-store .logo{font-size:13px}
+.compact-store .brand-mark{width:34px;height:34px;font-size:20px}
+.compact-store .contact{padding:9px 11px;font-size:12px}
+.compact-store .hero{padding:24px 0 26px!important}
+.compact-store .hero h1{font-size:29px;letter-spacing:-1px}
+.compact-store .hero p{font-size:13px;margin-bottom:14px}
+.compact-store .catalog{padding-top:22px}
+.compact-store .heading h2{font-size:23px}
+.compact-store .filters{grid-template-columns:1fr 1fr;gap:9px}
+.compact-store .filters input{grid-column:span 2}
+.compact-store .grid{grid-template-columns:1fr}
+.compact-store .photo{aspect-ratio:4/3}
+}
