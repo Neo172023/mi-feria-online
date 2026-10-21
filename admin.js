@@ -42,7 +42,7 @@ if (isProtectedPanel) {
   publishStatus.textContent = 'Para publicar, ingresá desde el administrador protegido de Cloudflare.';
 }
 async function apiCatalog() {
-  const response = await fetch('/api/catalog', {credentials:'same-origin',cache:'no-store'});
+  const response = await fetch('https://ventas-hugo-admin-api.hugominguezkhal.workers.dev/api/catalog', {credentials:'include',cache:'no-store'});
   const data = await response.json();
   if (!response.ok) throw Error(data.error || 'No se pudo consultar GitHub');
   return data;
@@ -88,8 +88,8 @@ publishButton.addEventListener('click', async () => {
     }
     const payload = {products:valid(items),photos,baseCommit};
     publishStatus.textContent = 'Publicando en GitHub…';
-    const response = await fetch('/api/publish',{
-      method:'POST',credentials:'same-origin',
+    const response = await fetch('https://ventas-hugo-admin-api.hugominguezkhal.workers.dev/api/publish',{
+      method:'POST',credentials:'include',
       headers:{'Content-Type':'application/json'},
       body:JSON.stringify(payload)
     });
