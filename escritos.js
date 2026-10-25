@@ -125,6 +125,33 @@
         main#inicio{margin-top:18px}
       }
     `;
+    compact.textContent += `
+      @media(min-width:850px){
+        body main#inicio{display:block!important;max-width:none!important;margin:0!important;padding:0!important}
+        main#inicio>.ms-dual-cover{width:min(1160px,calc(100% - 48px));margin:24px auto 0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px;align-items:stretch}
+        main#inicio>.ms-dual-cover>.hero{grid-column:auto!important;grid-row:auto!important;display:flex;align-items:center;min-height:360px;height:100%;width:100%;border-radius:22px;overflow:hidden;padding:32px!important;margin:0!important}
+        main#inicio>.ms-dual-cover>.hero>.wrap{width:100%;max-width:none;margin:0!important;padding:0!important}
+        main#inicio>.ms-dual-cover>.hero h1{font-size:clamp(32px,3vw,47px)}
+        main#inicio>.ms-dual-cover>.hero p{font-size:14px}
+        main#inicio>.ms-dual-cover>.escritos-section{grid-column:auto!important;grid-row:auto!important;width:100%;max-width:none;margin:0!important;padding:0!important}
+        main#inicio>.ms-dual-cover>.escritos-section>.ms-literary{min-height:360px;height:100%;margin:0!important;border-radius:22px;padding:32px!important;display:flex;flex-direction:column;justify-content:center;box-shadow:none}
+        main#inicio>.ms-dual-cover>.escritos-section>.ms-literary h2{font-size:clamp(32px,3vw,45px)}
+        main#inicio>.ms-dual-cover>.escritos-section>.escritos-grid,
+        main#inicio>.ms-dual-cover>.escritos-section>.escritos-more,
+        main#inicio>.ms-dual-cover>.escritos-section>.escritos-empty,
+        main#inicio>.ms-dual-cover>.escritos-section>.ms-rights{display:none!important}
+        main#inicio>.catalog{padding-top:42px}
+        main#inicio>.cta{margin:0!important}
+      }
+    `;
+    const commercial = document.querySelector('main#inicio > .hero');
+    const literary = document.getElementById('escritos');
+    if (commercial && literary) {
+      const cover = document.createElement('div');
+      cover.className = 'ms-dual-cover';
+      commercial.parentNode.insertBefore(cover,commercial);
+      cover.append(commercial,literary);
+    }
     document.head.append(compact);
   }
 
