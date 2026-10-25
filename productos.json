@@ -1,5 +1,22 @@
 [
   {
+    "id": "art-mvofcboh",
+    "nombre": "Celular ",
+    "categoria": "Tecnología",
+    "descripcion": "Celular Motorola G77 poco uso 8 GB ram y 512 GB almacenamiento ",
+    "precio": 450000,
+    "precioAnterior": null,
+    "imagen": "assets/foto-mvofc26i-0.png",
+    "imagenes": [
+      "assets/foto-mvofc26i-0.png",
+      "assets/foto-mvofc26i-1.jpg",
+      "assets/foto-mvofc26i-2.jpg"
+    ],
+    "emoji": "📦",
+    "estado": "Disponible",
+    "fecha": "2026-10-25"
+  },
+  {
     "id": "art-mvi3ogej",
     "nombre": "Bicicleta",
     "categoria": "Otros",
