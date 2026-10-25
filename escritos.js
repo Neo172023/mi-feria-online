@@ -85,6 +85,29 @@
       .catalog{padding-top:35px}
       @media(max-width:600px){.hero{padding:30px 0!important}.hero h1{font-size:37px}.escritos-section{padding-top:12px!important}}
     `;
+    compact.textContent += `
+      @media(min-width:850px){
+        main#inicio{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:18px;align-items:stretch}
+        main#inicio>.hero{grid-column:1;grid-row:1;display:flex;align-items:center;padding:30px 0 30px max(24px,calc((100vw - 1160px)/2))!important;min-height:360px}
+        main#inicio>.hero>.wrap{max-width:none;width:100%;padding:0 24px 0 0;margin:0}
+        main#inicio>.hero h1{font-size:clamp(32px,3.5vw,53px);letter-spacing:-1.7px}
+        main#inicio>.hero p{font-size:14px}
+        main#inicio>.escritos-section{grid-column:2;grid-row:1;max-width:none;width:auto;margin:0;padding:14px max(24px,calc((100vw - 1160px)/2)) 14px 0!important}
+        main#inicio>.escritos-section>.ms-literary{height:100%;min-height:360px;display:flex;flex-direction:column;justify-content:center;padding:clamp(22px,3vw,42px)!important;margin:0!important;border-radius:20px}
+        main#inicio>.escritos-section>.ms-literary h2{font-size:clamp(30px,3.2vw,46px)}
+        main#inicio>.escritos-section>.ms-literary p{font-size:clamp(15px,1.5vw,18px)}
+        main#inicio>.escritos-section>.escritos-grid,
+        main#inicio>.escritos-section>.escritos-more,
+        main#inicio>.escritos-section>.escritos-empty,
+        main#inicio>.escritos-section>.ms-rights{display:none!important}
+        main#inicio>.catalog,main#inicio>.cta{grid-column:1/-1}
+        .ms-hero-link{align-self:flex-start}
+      }
+      @media(max-width:849px){
+        .ms-literary .ms-sign{display:block}
+        .ms-hero-link{margin-top:12px}
+      }
+    `;
     document.head.append(compact);
   }
 
