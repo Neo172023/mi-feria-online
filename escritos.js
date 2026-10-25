@@ -60,6 +60,34 @@
     document.title = 'Mis escritos y reflexiones | Man Simple';
   }
 
+  if (preview) {
+    const homeHero = document.querySelector('.hero');
+    const writings = document.getElementById('escritos');
+    if (homeHero && writings) {
+      homeHero.insertAdjacentElement('afterend', writings);
+      const catalog = document.getElementById('catalogo');
+      if (catalog) catalog.insertAdjacentElement('beforebegin', writings);
+    }
+    const compact = document.createElement('style');
+    compact.textContent = `
+      .hero{padding:clamp(30px,4vw,52px) 0!important}
+      .hero h1{font-size:clamp(35px,5vw,58px);margin:10px 0!important;line-height:1.05}
+      .hero p{font-size:15px;line-height:1.5;margin:12px 0 18px;max-width:520px}
+      .hero .primary{padding:12px 20px}
+      .escritos-section{padding-top:18px!important;padding-bottom:25px!important}
+      .escritos-section .ms-literary{padding:clamp(22px,3vw,38px)!important;margin-bottom:18px!important}
+      .escritos-section .ms-literary h2{font-size:clamp(31px,4vw,48px);margin-bottom:10px}
+      .escritos-section .ms-literary p{font-size:clamp(15px,1.8vw,19px);line-height:1.45;margin-bottom:10px}
+      .escritos-section .ms-kicker{margin-bottom:9px}
+      .escritos-section .ms-line{margin:10px 0}
+      .ms-hero-link{display:inline-block;background:#c8a875;color:#14263d!important;border-radius:9px;padding:12px 20px;font:800 14px system-ui,sans-serif;text-decoration:none;margin-top:16px}
+      .ms-hero-link:hover{background:#e4c990}
+      .catalog{padding-top:35px}
+      @media(max-width:600px){.hero{padding:30px 0!important}.hero h1{font-size:37px}.escritos-section{padding-top:12px!important}}
+    `;
+    document.head.append(compact);
+  }
+
   const section = preview ? document.getElementById('escritos') : document.querySelector('.escritos-page');
   if (section) {
     const hero = document.createElement('div');
@@ -70,6 +98,7 @@
     const line = document.createElement('div'); line.className = 'ms-line';
     const sign = document.createElement('span'); sign.className = 'ms-sign'; sign.textContent = 'Man Simple';
     hero.append(kicker,heading,subtitle,line,sign);
+    if (preview) { const link = document.createElement('a'); link.className = 'ms-hero-link'; link.href = 'escritos.html'; link.textContent = 'Leer mis escritos →'; hero.append(link); }
     section.insertBefore(hero, preview ? section.firstChild : root);
     const rights = document.createElement('aside'); rights.className = 'ms-rights'; rights.setAttribute('aria-label','Derechos de autor');
     const lead = document.createElement('strong'); lead.textContent = '© Derechos de autor · ';
