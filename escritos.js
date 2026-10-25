@@ -172,6 +172,36 @@
     rights.append(lead,document.createTextNode(copyright));
     section.append(rights);
   }
+  if (preview) {
+    const writings = document.getElementById('escritos');
+    const catalog = document.getElementById('catalogo');
+    const cover = document.querySelector('.ms-dual-cover');
+    if (writings && catalog && cover) {
+      const listing = document.createElement('section');
+      listing.className = 'wrap ms-writings-list';
+      listing.id = 'publicaciones';
+      const heading = document.createElement('h2');
+      heading.textContent = 'Últimos escritos de Man Simple';
+      listing.append(heading);
+      for (const selector of ['#escritos-preview','#escritos-preview-empty','.escritos-more','.ms-rights']) {
+        const element = writings.querySelector(selector);
+        if (element) listing.append(element);
+      }
+      catalog.insertAdjacentElement('afterend', listing);
+      const style = document.createElement('style');
+      style.textContent = `
+        .ms-writings-list{padding-top:42px;padding-bottom:65px}
+        .ms-writings-list>h2{font:normal clamp(29px,3vw,43px)/1.2 Georgia,serif;color:#14263d;margin:0 0 24px}
+        .ms-writings-list .escritos-grid{display:grid!important}
+        .ms-writings-list .escritos-more{display:inline-block!important}
+        .ms-writings-list .ms-rights{display:block!important}
+        .ms-writings-list .escritos-empty:not([hidden]){display:block!important}
+        @media(max-width:600px){.ms-writings-list{padding-top:28px;padding-bottom:45px}}
+      `;
+      document.head.append(style);
+    }
+  }
+
   const more = document.querySelector('.escritos-more');
   if (more) more.textContent = 'Explorar todos mis escritos ↗';
 
