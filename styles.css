@@ -72,3 +72,14 @@
 .escritos-page-back{display:inline-block;margin-bottom:18px;color:#168c71;font-weight:750}
 @media(max-width:850px){.escritos-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:560px){.escritos-grid{grid-template-columns:1fr}.escritos-section{padding-top:42px;padding-bottom:55px}}
+
+/* Ficha de acceso a Cultura y tradición */
+.cultura-ficha{display:grid;grid-template-columns:minmax(220px,36%) 1fr;overflow:hidden;text-decoration:none;color:inherit;background:#fff;border:1px solid #e5eaf0;border-radius:20px;box-shadow:0 8px 25px #1a2a4410;transition:transform .2s,box-shadow .2s}
+.cultura-ficha:hover,.cultura-ficha:focus-visible{transform:translateY(-3px);box-shadow:0 14px 35px #1a2a4425;outline-offset:3px}
+.cultura-ficha-visual{min-height:245px;display:flex;justify-content:center;align-items:center;gap:13px;background:linear-gradient(135deg,#69452c,#b47a44 58%,#e9c18a);font-size:clamp(2.5rem,6vw,4.4rem)}
+.cultura-ficha-body{padding:30px;display:flex;flex-direction:column;justify-content:center;gap:13px}
+.cultura-ficha-kicker{font-size:12px;letter-spacing:.09em;font-weight:800;color:#996238}
+.cultura-ficha-body h3{font-size:clamp(1.35rem,3vw,1.9rem);margin:0;color:#172032}
+.cultura-ficha-body p{line-height:1.7;color:#64748b;margin:0}
+.cultura-ficha-link{align-self:flex-start;background:#e5f7f0;color:#173e38;padding:12px 16px;border-radius:10px;font-weight:750}
+@media(max-width:620px){.cultura-ficha{grid-template-columns:1fr}.cultura-ficha-visual{min-height:165px}.cultura-ficha-body{padding:22px}}
